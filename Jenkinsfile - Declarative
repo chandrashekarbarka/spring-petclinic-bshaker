@@ -4,13 +4,9 @@ pipeline
     {
         label 'ubuntu-worker'
     }
-    triggers
-    {
-        
-    }
     stages
     {
-        stage('clone'
+        stage('clone')
         {
             steps
             {
