@@ -1,0 +1,30 @@
+pipeline
+{
+    agent 
+    {
+        label 'ubuntu-worker'
+    }
+    triggers
+    {
+        
+    }
+    stages
+    {
+        stage('clone'
+        {
+            steps
+            {
+                git url: 'https://github.com/chandrashekarbarka/spring-petclinic-bshaker.git',
+                branch: 'main'
+            }
+        stage('mvn')
+        {
+            steps
+            {
+                sh 'mvn clean package'
+            }
+
+        }
+        
+    }
+}
