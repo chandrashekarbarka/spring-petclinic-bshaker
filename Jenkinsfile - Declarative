@@ -4,23 +4,27 @@ pipeline
     {
         label 'ubuntu-worker'
     }
-    stages
+    triggers
     {
-        stage('clone')
-        {
-            steps
-            {
-                git url: 'https://github.com/chandrashekarbarka/spring-petclinic-bshaker.git',
-                branch: 'main'
-            }
-        stage('mvn')
-        {
-            steps
-            {
-                sh 'mvn clean package'
-            }
 
-        }
+    }
+        stages
+        {
+            stage('clone'
+            {
+                steps
+                {
+                    git url: 'https://github.com/chandrashekarbarka/spring-petclinic-bshaker.git',
+                    branch: 'main'
+                }
+            stage('mvn')
+            {
+                steps
+                {
+                    sh 'mvn clean package'
+                }
+
+            }
         
     }
 }
